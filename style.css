@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato";
+}
+
+.header {
+  height: 100vh;
+}
+
+#logo.flex-container {
+  margin: 5px;
+}
+
+#logo img {
+  display: block;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  justify-content: space-around;
+  /* background-color: blanchedalmond; */
+}
+
+.navigation li {
+  padding: 10px 40px;
+  /* background-color: aqua; */
+}
+
+.navigation li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: rgb(95, 95, 95);
+  font-weight: 300;
+  transition: color 0.2s;
+}
+
+.navigation li a:hover {
+  color: black;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    height: auto;
+  }
+
+  .navigation li a {
+    font-size: 26px;
+  }
+}
+li img {
+  display: none;
+  /* rozjeżdża się bez tego przy tworzeniu layoutu */
+}
