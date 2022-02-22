@@ -12,6 +12,13 @@ body {
   height: 100vh;
 }
 
+.insta {
+  height: 30px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
 #logo.flex-container {
   margin: 5px;
 }
@@ -58,6 +65,10 @@ body {
 
   .navigation li a {
     font-size: 26px;
+  }
+
+  .insta {
+    display: none;
   }
 }
 li img {
