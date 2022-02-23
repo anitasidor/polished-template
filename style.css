@@ -8,6 +8,8 @@ body {
   font-family: "Lato";
 }
 
+/* początkowy widok */
+
 .header {
   height: 100vh;
 }
@@ -37,12 +39,10 @@ body {
   margin: 0 auto;
   padding: 10px 0;
   justify-content: space-around;
-  /* background-color: blanchedalmond; */
 }
 
 .navigation li {
   padding: 10px 40px;
-  /* background-color: aqua; */
 }
 
 .navigation li a {
@@ -71,7 +71,57 @@ body {
     display: none;
   }
 }
+
+/* sekcja about */
+
+.about {
+  display: flex;
+  padding: 200px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about img {
+  padding-right: 30px;
+}
+.about div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 420px;
+  height: 300px;
+}
+
+@media (max-width: 1000px) {
+  .about div {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 805px) {
+  .about {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .about div {
+    padding: 30px;
+    width: 400px;
+    height: auto;
+  }
+
+  .about img {
+    padding: 30px;
+  }
+
+  .about div p {
+    padding: 10px;
+  }
+}
+/* rozjeżdża się bez tego przy tworzeniu layoutu */
+
 li img {
   display: none;
-  /* rozjeżdża się bez tego przy tworzeniu layoutu */
 }
