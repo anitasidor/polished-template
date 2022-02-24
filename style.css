@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato";
 }
@@ -36,6 +40,7 @@ body {
   flex-wrap: wrap;
   list-style: none;
   width: 80%;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 10px 0;
   justify-content: space-around;
@@ -51,6 +56,7 @@ body {
   font-size: 30px;
   color: rgb(95, 95, 95);
   font-weight: 300;
+  letter-spacing: 2px;
   transition: color 0.2s;
 }
 
@@ -72,11 +78,18 @@ body {
   }
 }
 
+@media (max-width: 790px) {
+  .navigation li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* sekcja about */
 
 .about {
   display: flex;
-  padding: 200px 20px;
+  padding: 150px 20px;
   justify-content: center;
   align-items: center;
 }
@@ -120,8 +133,118 @@ body {
     padding: 10px;
   }
 }
-/* rozjeżdża się bez tego przy tworzeniu layoutu */
 
-li img {
-  display: none;
+@media (max-width: 500px) {
+  .about img {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .about {
+    padding: 40px 0;
+  }
+}
+
+/* portfolio */
+.portfolio,
+.contact {
+  width: 100%;
+  padding: 5px;
+}
+
+.portfolio h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 80px;
+  letter-spacing: 3px;
+}
+
+.brands {
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.brands li img {
+  width: 250px;
+  margin: 50px 30px;
+}
+
+/* contact */
+
+.contact {
+  width: 80%;
+  max-width: 800px;
+  margin: 80px auto;
+}
+
+.contact h2 {
+  /* font-size: 30px; */
+  /* font-weight: 400; */
+  padding-bottom: 20px;
+}
+
+.contact .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact p {
+  width: 50%;
+}
+
+.contact ul li {
+  padding: 10px;
+}
+
+.contact a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.contact a:hover {
+  color: rgb(95, 95, 95);
+}
+
+@media (max-width: 960px) {
+  .contact {
+    width: 90%;
+    max-width: fit-content;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact h2 {
+    text-align: center;
+  }
+
+  .contact .container {
+    flex-direction: column-reverse;
+  }
+
+  .contact p {
+    width: 90%;
+  }
+
+  .contact ul {
+    padding: 20px 0 40px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: small;
+  opacity: 0.4;
 }
